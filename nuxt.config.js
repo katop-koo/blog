@@ -41,7 +41,7 @@ export default {
     injected: true,
     html: true,
     linkify: true,
-    typography: true,
+    typography: true
   },
   generate: {
     routes() {

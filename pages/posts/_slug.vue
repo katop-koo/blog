@@ -3,7 +3,8 @@
     <div class="single">
       <h1 class="post-title">{{ post.fields.title }}</h1>
       <p class="post-created-at">{{ formatDate(post.fields.publishDate) }}</p>
-      <div class="post-content" v-html="$md.render(post.fields.body)"></div>
+      <div class="post-content" v-html="post.fields.body"></div> 
+<!--      <div class="post-content" v-html="$md.render( post.fields.body )"></div> -->
     </div>
   </article>
 </template>
@@ -45,37 +46,44 @@ export default {
 </script>
 
 <style lang="scss">
-article.article {
+section.latest-posts {
   padding: 10px;
-  .single {
+  .posts {
     max-width: 900px;
     margin: 0 auto;
     padding: 10px;
-    color: #222;
-    border: 2px solid #444;
-    border-radius: 10px;
-    h1, h2, h3 {
-      margin: 16px 0;
-    }
-    h1.post-title {
-      font-size: 32px;
-      text-decoration: underline;
-    }
-    .post-content {
-      h1 {
-        font-size: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #ddd;
+    a.post {
+      width: calc(100% / 2 - 20px);
+      @media (min-width: (768px)) {
+        width: calc(100% / 3 - 20px);
       }
-      h2 {
-        font-size: 24px;
-        background: #ccc
+      margin: 10px;
+      background: #fff;
+      text-decoration: none;
+      color: #111;
+      .thumb {
+        width: 100%;
+        padding-bottom: 75%;
+        position: relative;
+        overflow: hidden;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 100%;
+        }
       }
-      p {
-        margin: 16px 0;
-        font-size: 16px;
-      }
-      img {
-        max-width: 100%;
-        border: 1px solid #000;
+      .post-text {
+        padding: 5px 10px 10px;
+        h2 {
+          width: fit-content;
+          font-size: 20px;
+        }
       }
     }
   }
