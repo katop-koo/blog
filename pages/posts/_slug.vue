@@ -46,44 +46,49 @@ export default {
 </script>
 
 <style lang="scss">
-section.latest-posts {
+article.article {
   padding: 10px;
-  .posts {
+  .single {
     max-width: 900px;
     margin: 0 auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background: #ddd;
-    a.post {
-      width: calc(100% / 2 - 20px);
-      @media (min-width: (768px)) {
-        width: calc(100% / 3 - 20px);
+    padding: 20px;
+    color: #222;
+    border: 5px solid #444;
+    h1, h2, h3 {
+      font-family:"proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+      margin: 10px 0;
+    }
+    h1.post-title {
+      font-family:"Noto Sans JP","proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+      font-size: 40x;
+      padding-bottom: 20px;
+      text-decoration: underline;
+    }
+    .post-created-at {
+        margin: 10px 0;
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    .post-content {
+      font-family:"Noto Sans JP","proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+      font-size: 20px;
+      h1 {
+        font-family:"proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+        font-size: 100px;
       }
-      margin: 10px;
-      background: #fff;
-      text-decoration: none;
-      color: #111;
-      .thumb {
-        width: 100%;
-        padding-bottom: 75%;
-        position: relative;
-        overflow: hidden;
-        img {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          max-width: 100%;
-        }
+      h2 {
+        font-family:"Noto Sans JP","proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+        font-size: 300px;
+        background: #ccc
       }
-      .post-text {
-        padding: 5px 10px 10px;
-        h2 {
-          width: fit-content;
-          font-size: 20px;
-        }
+      p {
+        margin: 16px 0;
+        font-size: 200px;
+        padding-bottom: 20px;
+      }
+      img {
+        max-width: 100%;
+        border: 1px solid #000;
       }
     }
   }

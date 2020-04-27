@@ -1,7 +1,7 @@
 <template>
   <section class="latest-posts">
-    <div>
-      <h1>KAJICO</h1>
+    <div margin-left="20px">
+      <h1 padding-left="20px">カジコ</h1>
     </div>
     <div class="posts">
 <!--      <div v-for="(post, index) in posts" :key="index" class="post"> -->
@@ -54,39 +54,55 @@ export default {
 }
 </script>
 <style lang="scss">
-article.article {
-  padding: 10px;
-  .single {
+
+section.latest-posts {
+  padding: 15px,15px;
+  padding-left: 30px;
+  font-family:"source-han-sans-japanese heavy","proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3";
+  font-size:30px;
+  .posts {
+    font-family:"proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
     max-width: 900px;
     margin: 0 auto;
     padding: 10px;
-    color: #222;
-    border: 2px solid #444;
-    border-radius: 10px;
-    h1, h2, h3 {
-      margin: 16px 0;
-    }
-    h1.post-title {
-      font-size: 32px;
-      text-decoration: underline;
-    }
-    .post-content {
-      h1 {
-        font-size: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #ddd;
+    a.post {
+      width: calc(100% / 2 - 20px);
+      @media (min-width: (768px)) {
+        width: calc(100% / 3 - 20px);
       }
-      h2 {
-        font-size: 24px;
-        background: #ccc
+      margin: 10px;
+      background: #fff;
+      text-decoration: none;
+      color: #111;
+      .thumb {
+        width: 100%;
+        padding-bottom: 75%;
+        position: relative;
+        overflow: hidden;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 100%;
+        }
       }
-      p {
-        margin: 16px 0;
-        font-size: 16px;
-      }
-      img {
-        max-width: 100%;
-        border: 1px solid #000;
+      .post-text {
+        padding: 5px 10px 10px;
+        font-size: 15px;
+        h2 {
+          width: fit-content;
+          font-family:"Noto Sans JP","proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+
+          font-size: 25px;
+        }
       }
     }
   }
 }
+
 </style>
