@@ -1,7 +1,7 @@
 <template>
   <section class="latest-posts">
-    <div margin-left="20px">
-      <h1 padding-left="20px">カジコ</h1>
+    <div class="logo">
+      <h1>カジコ</h1>
     </div>
     <div class="posts">
 <!--      <div v-for="(post, index) in posts" :key="index" class="post"> -->
@@ -23,6 +23,7 @@
 <script>
 import client from '~/plugins/contentful'
 import { mapGetters } from 'vuex'
+//import test from '../test.md'
 
 export default {
   asyncData({ params }) {
@@ -58,8 +59,17 @@ export default {
 section.latest-posts {
   padding: 15px,15px;
   padding-left: 30px;
-  font-family:"source-han-sans-japanese heavy","proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3";
+  font-family:A\+EqpB-游ゴシック体 Pr6N M,sans-serif;
   font-size:30px;
+  .logo {
+      padding: 15px,15px;
+      margin-bottom: 10px;
+      width: 15%;     
+      text-align: center;
+//      border: 5px solid #000;
+      font-family:A\+EqpB-游ゴシック体 Pr6N M,sans-serif;
+      font-style:bold;
+  }
   .posts {
     font-family:"proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
     max-width: 900px;

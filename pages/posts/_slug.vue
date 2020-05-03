@@ -3,8 +3,7 @@
     <div class="single">
       <h1 class="post-title">{{ post.fields.title }}</h1>
       <p class="post-created-at">{{ formatDate(post.fields.publishDate) }}</p>
-      <div class="post-content" v-html="post.fields.body"></div> 
-<!--      <div class="post-content" v-html="$md.render( post.fields.body )"></div> -->
+      <div class="post-content" v-html="$md.render(post.fields.body)"></div> 
     </div>
   </article>
 </template>
@@ -74,16 +73,16 @@ article.article {
       font-size: 20px;
       h1 {
         font-family:"proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
-        font-size: 100px;
+        font-size: 40px;
       }
       h2 {
         font-family:"Noto Sans JP","proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
-        font-size: 300px;
+        font-size: 30px;
         background: #ccc
       }
       p {
         margin: 16px 0;
-        font-size: 200px;
+        font-size: 20px;
         padding-bottom: 20px;
       }
       img {
