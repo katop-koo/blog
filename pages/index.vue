@@ -1,67 +1,51 @@
 <template>
-  <div>
-    <div class="moment">
-      <no-ssr>
-        <vue-typer text="WE ARE KAJICO." :repeat='1' initial-action='erasing' erase-style='clear' type-delay='300'></vue-typer>
-      </no-ssr>
-      <p>WE ARE KAJICO.</p>
-      <p>RIGHT TIME,RIGH PLACE<br>CATCH THE PICTURE,WEB,etc</p>
-    </div>
+  <div :class="{
+        'moment-pc': $ua.deviceType() === 'pc',
+        'moment-mob': $ua.deviceType() !== 'pc'
+      }">
+    <p>WE ARE KAJICO. {{$ua.deviceType()}}</p>
+    <p>THE PHOTO,WEB,etc</p>
     <section class="card">
       <div class="card-content">
-        <h1 class="card-title">カジコ</h1>
-        <h1 class="card-title">blog</h1>
-        <nuxt-link to="blog">>>></nuxt-link>
-        <h1 class="card-title">contact</h1>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd1EhTGDxOeyv7j8iIs0Kbl9FHujUXTipoK_yWsDZGszEuHbg/viewform">form</a>
+        <p class="card-title">カジコ</p>
+        <nuxt-link to="blog" class="card-text">news</nuxt-link>
+        <a class="card-text" href="https://docs.google.com/forms/d/e/1FAIpQLSd1EhTGDxOeyv7j8iIs0Kbl9FHujUXTipoK_yWsDZGszEuHbg/viewform">contact</a>
         <p class="card-text">YOKOHAMA CITY</p>
-        <p class="card-text">kajicoq@gmail.com</p>
       </div>
     </section>
-
   </div>
 </template>
 
 <script>
-//import { VueTyper } from 'vue-typer'
-//
-//export default {
-//  components: {
-//    VueTyper
-//  }
-//}
+
 </script>
 
-<style>
-
+<style lang="scss" scoped>
 h1.footline {
   font-family : Noto Sans,BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3",;
   font-style : ExtraBold;
   font-size : 40px;
   color : #000000;
 }
-.vue-typer {
-  font-family : Noto Sans,BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3",;
-  font-style : ExtraBold;
-  font-weight : 900;
-  font-size : 111px;
-  padding: 0px;
-  margin-top : 0px;
-  margin-bottom : 0px;
-  margin-left : 20px;
-  color : #000000;
-}
+
 .moment {
   font-family : Noto Sans,BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3",;
   font-style : ExtraBold;
-  font-weight : 900;
-  font-size : 80px;
-  margin-left : 20px;
   color : #000000;
+  &-pc{
+    font-weight : 900;
+    font-size : 70px;
+    margin-left : 20px;
+  }
+  &-mob{
+    font-weight : 500;
+    font-size : 30px;
+    margin-left : 10px;
+  }
 }
 .card {
   margin: 120px 30px 0px 680px;
-  width: 350px;
+  width: 250px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
@@ -72,11 +56,10 @@ h1.footline {
   height: auto;
 }
 .card-content {
-  padding: 20px;
+  padding: 15px;
 }
 .card-title {
   font-size: 20px;
-  margin-bottom: 20px;
   text-align: left;
   color: #333;
 }
@@ -85,4 +68,5 @@ h1.footline {
   font-size: 14px;
   line-height: 1.5;
 }
+
 </style>

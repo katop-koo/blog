@@ -1,12 +1,26 @@
 <template>
-  <div>
+  <div class="container">
     <transition name="page">
       <nuxt />
     </transition>
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+
+.container {
+  width: 1200px;
+  margin: auto;
+  padding: 0 80px;
+  min-height: 100vh;
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0 0;
+  }
+}
+
 html {
   font-family:"Noto Sans JP","proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
   font-size: 16px;

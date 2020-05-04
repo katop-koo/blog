@@ -47,8 +47,10 @@ export default {
 
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-user-agent'
   ],
+   
   markdownit: {
     html: false,
     linkify: true,
