@@ -11,7 +11,7 @@ export default {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s - サイト名',
+    titleTemplate: '%s:KAJICO',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -34,14 +34,15 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/scss/common.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
 
   plugins: [
-    '@/plugins/contentful'
-    
+    '@/plugins/contentful',
+      {src: '~/plugins/vue-typer.js', ssr: false}
   ],
 
   modules: [
@@ -49,7 +50,7 @@ export default {
     '@nuxtjs/dotenv'
   ],
   markdownit: {
-    html: true,
+    html: false,
     linkify: true,
     injected: true,
     breaks: true,
