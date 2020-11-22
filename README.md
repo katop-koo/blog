@@ -20,6 +20,9 @@ $ npm run start
 $ npm run generate
 ```
 
+# リリース方法
+S3にnpm run generateでできたdist/以下のファイルをアップロード
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 =======
 # blog
